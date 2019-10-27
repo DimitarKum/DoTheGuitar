@@ -2,6 +2,7 @@ package com.shusha.dotheguitar
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -9,9 +10,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.shusha.dotheguitar.model.DisplayableChord
 import com.shusha.dotheguitar.model.ChordPicker
-import com.shusha.dotheguitar.model.MusicNote
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private val chordPicker: ChordPicker = ChordPicker()
@@ -34,7 +34,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun generateChord(view: View) {
-        val txtTest:TextView = findViewById(R.id.txtTest)
-        txtTest.text = chordPicker.pickAChord()
+        val txtChordFullName:TextView = findViewById(R.id.txtChordFullName)
+        val chosenDisplayableChord: DisplayableChord = chordPicker.pickAChord()
+        txtChordFullName.text = chosenDisplayableChord.getFullName()
+
+        val txtChordTab:TextView = findViewById(R.id.txtChordTab)
+        txtChordTab.text = chosenDisplayableChord.getTab()
+        txtChordTab.alpha = 0.0f
+    }
+
+    fun revealChordTab(view: View) {
+        (findViewById<TextView>(R.id.txtChordTab)).alpha = 1.0f
     }
 }

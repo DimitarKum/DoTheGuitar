@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/txtTest"
+        android:id="@+id/txtChordFullName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -55,5 +55,29 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="@+id/nav_host_fragment"
         app:layout_constraintTop_toTopOf="@+id/nav_host_fragment" />
+
+    <TextView
+        android:id="@+id/txtChordTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="156dp"
+        android:alpha="0.0"
+        android:fontFamily="monospace"
+        android:text="-------\n-------\n-------\n-------\n-------\n-------"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/nav_host_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/txtChordFullName" />
+
+    <Button
+        android:id="@+id/btnShowChordTab"
+        android:onClick="revealChordTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="48dp"
+        android:text="Reveal Tab"
+        app:layout_constraintBottom_toTopOf="@+id/txtChordTab"
+        app:layout_constraintStart_toStartOf="@+id/nav_host_fragment" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

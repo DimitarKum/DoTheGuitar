@@ -3,12 +3,15 @@ package com.shusha.dotheguitar.model
 import org.junit.Test
 
 import com.google.common.truth.Truth.*
+import com.shusha.dotheguitar.model.music_elements.MusicNote
 
 class MusicNoteTest {
 
     @Test
     fun findDistanceToNote_sameNote_zeroDistance() {
-        assertThat(MusicNote.A_SHARP.findDistanceToNote(MusicNote.A_SHARP)).isEqualTo(0)
+        assertThat(
+            MusicNote.A_SHARP.findDistanceToNote(
+                MusicNote.A_SHARP)).isEqualTo(0)
     }
 
     @Test
@@ -28,6 +31,8 @@ class MusicNoteTest {
 
     @Test
     fun findDistanceToNote_lastToFirstNoteWrap_positiveDistance() {
-        assertThat(MusicNote.G_SHARP.findDistanceToNote(MusicNote.A)).isEqualTo(1)
+        assertThat(
+            MusicNote.G_SHARP.findDistanceToNote(
+                MusicNote.A)).isEqualTo(1)
     }
 }

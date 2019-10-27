@@ -1,4 +1,4 @@
-package com.shusha.dotheguitar.model
+package com.shusha.dotheguitar.model.music_elements
 
 enum class GuitarString(val note: MusicNote, val text: String) {
     FIRST(MusicNote.E, "1st"),

@@ -5,7 +5,6 @@ import com.shusha.dotheguitar.model.music_elements.GuitarString
 import java.util.*
 
 class ScalePicker {
-
     private val pickableStrings: List<GuitarString> = listOf(
         GuitarString.FOURTH,
         GuitarString.FIFTH,

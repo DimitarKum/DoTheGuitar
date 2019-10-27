@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">DoTheGuitar</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">ChordPicker</string>
+    <string name="title_dashboard">ScalePicker</string>
+    <string name="title_notifications">TODO:…</string>
     <string name="txtGenerateChordBtn">Generate</string>
     <string name="chord_placeholder"><![CDATA[<Chord Placeholder>]]></string>
 </resources>

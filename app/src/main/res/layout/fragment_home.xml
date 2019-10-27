@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,12 +9,62 @@
         android:id="@+id/text_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/btnGenerateChord"
+        android:layout_width="130dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="68dp"
+        android:onClick="generateChord"
+        android:text="@string/txtGenerateChordBtn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtChordFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/chord_placeholder"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text_home" />
+
+    <TextView
+        android:id="@+id/txtChordTab"
+        android:layout_width="187dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="56dp"
+        android:alpha="0.0"
+        android:fontFamily="monospace"
+        android:text="-------\n-------\n-------\n-------\n-------\n-------"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenerateChord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowChordTab"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <Button
+        android:id="@+id/btnShowChordTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="revealChordTab"
+        android:text="Reveal Tab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtChordFullName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

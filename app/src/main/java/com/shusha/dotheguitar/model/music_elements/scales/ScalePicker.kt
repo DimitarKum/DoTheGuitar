@@ -15,7 +15,7 @@ class ScalePicker {
         return DisplayableScale(
             createARandomMusicScale(),
             pickableStrings[Random().nextInt(pickableStrings.size)],
-            Random().nextInt(1) == 1
+            Random().nextInt(2) == 1
         )
     }
 }

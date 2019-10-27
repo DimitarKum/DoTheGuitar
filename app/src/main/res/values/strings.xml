@@ -3,6 +3,8 @@
     <string name="title_home">ChordPicker</string>
     <string name="title_dashboard">ScalePicker</string>
     <string name="title_notifications">TODO:…</string>
-    <string name="txtGenerateChordBtn">Generate</string>
+    <string name="txtGenerateChordBtn">Generate Chord</string>
+    <string name="txtGenerateScaleBtn">Generate Scale</string>
     <string name="chord_placeholder"><![CDATA[<Chord Placeholder>]]></string>
+    <string name="scale_placeholder"><![CDATA[<Scale Placeholder>]]></string>
 </resources>

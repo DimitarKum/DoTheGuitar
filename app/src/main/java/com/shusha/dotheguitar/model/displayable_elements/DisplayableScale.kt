@@ -8,4 +8,9 @@ class DisplayableScale(
     val rootString: GuitarString,
     val isLeftOfRoot: Boolean
 ) {
+
+    fun getFullName(): String {
+        return musicScale.rootNote.text + " " + musicScale.scaleMode.modeName +
+                " on " + rootString.text + " to the " + if (isLeftOfRoot) "left" else "right"
+    }
 }

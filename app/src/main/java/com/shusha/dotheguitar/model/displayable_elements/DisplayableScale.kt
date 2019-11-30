@@ -13,4 +13,8 @@ class DisplayableScale(
         return musicScale.rootNote.text + " " + musicScale.scaleMode.modeName +
                 " on " + rootString.text + " to the " + if (isLeftOfRoot) "left" else "right"
     }
+
+    fun getTab(): String {
+        return ""
+    }
 }

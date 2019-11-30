@@ -13,16 +13,12 @@ class DisplayableChord(
         return musicChord.text + " on " + rootString.text + " string"
     }
 
-    fun getTab(): String {
+    fun getTab(): DisplayableTab {
         val rootPosition: Int = rootString.findPositionOfNoteOnString(musicChord.rootNote)
 
-        return musicChord.mode.referenceStringToFretPositions[rootString]
-            ?.map { fret -> if (fret == EMPTY_FRET) "-" else (fret + rootPosition).toString() }
-            ?.reversed()
-            ?.joinToString(
-                prefix = "---",
-                postfix = "---",
-                separator = "---\n---"
-            ).orEmpty()
+        return DisplayableTab(
+            musicChord.mode.referenceStringToFretPositions[rootString],
+            rootPosition
+        )
     }
 }

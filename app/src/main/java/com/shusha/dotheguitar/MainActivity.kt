@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         txtChordFullName.text = chosenDisplayableChord.getFullName()
 
         val txtChordTab:TextView = findViewById(R.id.txtChordTab)
-        txtChordTab.text = chosenDisplayableChord.getTab()
+        txtChordTab.text = chosenDisplayableChord.getTab().toString()
         txtChordTab.alpha = 0.0f
     }
 
